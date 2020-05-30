@@ -1,0 +1,19 @@
+object FibonacciSeries extends App{
+    def fiboNum(n:Int):Unit ={
+        var x = 0;
+       while(x<=n){
+           print(fibo(x)+" ");
+           x = x+1;
+       }
+       println();
+    }
+    
+    def fibo(x:Int): Int=x match {
+        case x if(x==0) => 0
+        case x if(x==1) => 1
+        case x => fibo(x-1) + fibo(x-2)
+    }
+    fiboNum(5);
+    fiboNum(13);
+    fiboNum(46);
+}
